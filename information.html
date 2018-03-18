@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/family.css"/>
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="scrollbar">
+<div class="container-fluid">
+    <!--面包屑-->
+    <div class="row">
+        <p class="addCrumbs"><a href="#">个人中心</a></p>
+    </div>
+    <div class="row border4">
+        <div class="col-lg-12 classCreateInfo">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    用户账号 <input type="text" class="txtBox" id="projectName"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    原密码 <input type="text" class="txtBox" id="familyName"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    新密码 <input type="text" class="txtBox" id="total"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    确认密码 <input type="text" class="txtBox" id="type"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="listItem col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p class="message"></p>
+    </div>
+    <div class="row updateBtn">
+        <div class="col-lg-3 col-md-3"></div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 myButton">
+            <!--查询按钮-->
+            <button type="button" class="btnconfirm" id="cancel">
+                取消
+            </button>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 myButton">
+            <!--查询按钮-->
+            <button type="button" class="btnconfirm saveBtn">
+                保存
+            </button>
+        </div>
+        <div class="col-lg-3 col-md-3"></div>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="js/data.js"></script>
+<script>
+    $(".saveBtn").click(function(){
+console.log(selfArr)
+        let count=$("#projectName").val();
+        let pwd_old =$("#familyName").val();
+        let pwd_new =$("#total").val();
+        let pwd_new2 =$("#type").val();
+        if(count=='' || pwd_old=='' || pwd_new=='' ||pwd_new2==''){
+            $(".message").text("信息未填写完整！");
+        }
+        else if(pwd_new!=pwd_new2){
+            $(".message").text("新密码不一致！");
+        }
+        else if(pwd_old!=window.top.selfArr[0].pwd){
+            $(".message").text("原密码不正确！");
+        }
+    })
+
+    $("#cancel").click(function(){
+        $("input").val("");
+        window.location.href="user.html";
+    });
+
+
+
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

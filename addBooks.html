@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/books.css"/>
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="scrollbar">
+<div class="container-fluid">
+    <!--面包屑-->
+    <div class="row">
+        <p class="addCrumbs"><a href="books.html">账簿管理</a>&ensp;\&ensp;<span class="crumbsTxt">新增账簿</span></p>
+    </div>
+    <div class="row border4">
+        <div class="col-lg-12 h2">账簿基本信息</div>
+        <div class="col-lg-12 classCreateInfo">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    收支项目<input type="text" class="txtBox" id="perName"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    收支家庭成员 <input type="text" class="txtBox" id="sex"/>
+            </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    收支金额 <input type="text" class="txtBox" id="card"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    收入/支出 <input type="text" class="txtBox" id="address"/>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    收支日期 <input type="text" class="txtBox" id="tel"/>
+                </div>
+            </div>
+            <div class="row beizhu">
+                <div class="col-lg-offset-1 col-lg-10">
+                    <span id="remarkLab1">备注</span>
+                    <textarea rows="5" cols="90" id="remark"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="listItem col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="message"></p>
+        </div>
+        <div class="row updateBtn">
+            <div class="col-lg-3 col-md-3"></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 myButton">
+                <!--查询按钮-->
+                <button type="button" class="btnconfirm" id="cancel">
+                    取消
+                </button>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 myButton">
+                <!--查询按钮-->
+                <button type="button" class="btnconfirm saveBtn">
+                    保存
+                </button>
+            </div>
+            <div class="col-lg-3 col-md-3"></div>
+        </div>
+    </div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="js/addBooks.js"></script>
+</body>
+</html>

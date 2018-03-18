@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭理财管理系统</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+    <header class="nav_header row">
+        <div class="switch pull-left">
+            <span class="fa fa-navicon"></span>
+        </div>
+        <div class="welcomeBlock">
+            <h1>Welcome</h1>
+        </div>
+        <div class="userBlock pull-right">
+            <img src="img/girl.png" alt="">
+            <span class="userName">Jessica</span>
+            <span class="fa fa-angle-down"></span>
+        </div>
+        <div class="userDetail">
+            <div class="triangle"></div>
+            <img src="img/girl.png" alt="">
+            <div class="userInfo">
+                <h3>Jessica<small>老婆</small></h3>
+                <p>账号：156532098</p>
+
+                <p class="">
+                    <a  href="information.html" class="to_information" target="iframe">个人中心 / </a>
+                    <a href="login.html">退出</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav nav_bar row">
+        <span class="fa fa-close pull-right"></span>
+        <div class="nav_bar_user">
+            <img src="img/girl.png" alt="">
+            <div class="userInfo">
+                <h5>Jessica<small>老婆</small></h5>
+                <p>账号：156532098</p>
+                <p class="">
+                    <a href="information.html" class="to_information">个人中心 / </a>
+                    <a href="login.html">退出</a>
+                </p>
+            </div>
+        </div>
+        <ul class="text-center list-unstyled">
+            <li>
+                <a href="family.html" target="iframe">
+                    <span class="fa fa-sitemap"></span>家庭成员<span class="fa fa-angle-right normalAngle"></span>
+                </a>
+            </li>
+            <li>
+                <a href="books.html" target="iframe">
+                    <span class="fa fa-address-book"></span>账簿管理 <span class="fa fa-angle-right normalAngle"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" ><span class="fa fa-pencil"></span>退出系统 <span class="fa fa-angle-right downAngle normalAngle"></span></a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="row mainBlock">
+        <div class="nav nav_slide pull-left">
+            <!--导航内容/可收起面板-->
+            <div class="nav">
+                <ul class="text-center list-unstyled">
+                    <li>
+                        <a href="family.html" target="iframe">
+                            <span class="fa fa-sitemap"></span>家庭成员<span class="fa fa-angle-right normalAngle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="books.html" target="iframe">
+                            <span class="fa fa-address-book"></span>账簿管理 <span class="fa fa-angle-right normalAngle"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html"><span class="fa fa-pencil"></span>退出系统<span class="fa fa-angle-right downAngle normalAngle"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="iframeBlock pull-left" >
+            <iframe src="family.html" frameborder="0" name="iframe"></iframe>
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/data.js"></script>
+</body>
+</html>

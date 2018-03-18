@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/family.css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/fonts/font_392052_jfhmcvnxuoldte29/iconfont.css"/>
+
+    <!--<link rel="stylesheet" href="../bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2"/>-->
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="scrollbar">
+<div class="container-fluid"><!--最外层-->
+    <div class="row contantBox">
+        <!--装内容的Box-->
+        <div class="col-lg-12">
+            <!--=============装面包屑头部Box和查询===============-->
+            <div class="row">
+                <div class="col-lg-10 col-md-8 col-sm-8 col-xs-6 stuGurautee">
+                    <p class="crumbs">家庭成员管理</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 stuGurautee">
+                    <button class="btn btnplus" id="userAdd">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>&nbsp;&nbsp;添加成员
+                </div>
+            </div>
+
+            <!--=================装表格==================-->
+            <div class="row border1 ">
+                <div class="col-lg-12 col-md-12 ">
+                    <div class="table-responsive scrollbar">
+                        <table class="table border dataTable " id="stuRecordTable">
+                            <tr>
+                                <th>编号</th>
+                                <th>姓名</th>
+                                <th>用户名</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr class="dataTr">
+                                <td class="no"></td>
+                                <td class="userName"></td>
+                                <td class="password"></td>
+                                <td class="operation"></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 确认操作模态框（Modal） -->
+<div class="modal fade"
+      tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
+            <div class="modal-header modal0">
+                <!--关闭窗口的××-->
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <!--提示信息-->
+                <h4 class="modal-title" >
+                    确认此操作吗？
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <!--确认按钮-->
+                <button type="button" class="btnconfirm okBtn" data-toggle="modal" data-target="#myModal2"  data-dismiss="modal"
+                        aria-hidden="true">
+                    确定
+                </button>
+                <!--取消按钮-->
+                <button type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 修改模态框（Modal） -->
+<div class="modal fade"
+     id="myModal" tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content  col-lg-6  col-md-8  col-sm-10 lie">
+            <div class="modal-header lie">
+                <!--关闭窗口的××-->
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">
+                    &times;
+                </button>
+                <!--提示信息-->
+                <h5 class="modal-title" id="myModalLabel">
+                    <span>编辑</span>
+                </h5>
+            </div>
+            <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row largeBorder lie">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h5 class="lhcrubs">家庭成员基本信息</h5>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 listBlock">
+                        <div class="listItem col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <label for="stuname">姓名</label>
+                            <input type="text" class="txtBox1 user_name" id="stuname"/>
+                        </div>
+                        <div class="listItem col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <label for="stuclass">用户名</label>
+                            <input type="text" class="txtBox1 user_pwd" id="stuclass"/>
+                        </div>
+                        <div class="listItem col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p class="message"></p>
+                        </div>
+                        <div class="listItem col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <button type="button" id="btnInsert">
+                                修改
+                            </button>
+                            <!--<input type="button" value="修改" onclick="updateInfo()" style="display:none" id="btn_update">-->
+                            <button type="button" id="btnCancel">
+                                取消
+                            </button>
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12 lie">
+            <!--修改按钮-->
+        </div>
+    </div>
+
+<!--<script src="js/data.js"></script>-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!--<script src="bootstrap-3.3.7-dist/js/npm.js"></script>-->
+<script src="js/family.js" charset="gb2312"></script>
+</body>
+</html>
